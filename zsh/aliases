@@ -153,3 +153,5 @@ alias al="vi ~/.zsh/aliases"
 alias gr="git reset HEAD"
 alias show_hidden="defaults write com.apple.finder AppleShowAllFiles YES; echo 'Do not forget to alt-click Finder & relaunch'"
 alias hide_hidden="defaults write com.apple.finder AppleShowAllFiles NO; echo 'Do not forget to alt-click Finder & relaunch'"
+
+alias wedidit="open dora-we-did-it.webm"
