@@ -19,6 +19,8 @@ compinit
 stty start undef
 stty stop undef
 
+export PATH=$PATH:/usr/local/bin
+
 # Sourcing of other files
 source $HOME/.dotfiles/zsh/aliases
 source $HOME/.dotfiles/zsh/functions
