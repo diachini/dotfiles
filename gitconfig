@@ -8,13 +8,36 @@
 	diff = auto
 	status = auto
 	branch = auto
+# Color stuff c/o https://github.com/chrishunt/dot-files/blob/5fda93afbe4ea9a269192ad9eef98885cedc207a/.gitconfig
+        interactive = auto
+        ui = true
+        pager = true
 
+[color "status"]
+        added = green
+        changed = red
+        untracked = magenta
 [color "diff"]
         meta = yellow
+        frag = magenta
+        old  = red
+        new  = green
+[color "branch"]
+        current = yellow reverse
+
+[color "diff-highlight"]
+        oldNormal = red bold
+        oldHighlight = red bold 52
+        newNormal = green bold
+        newHighlight = green bold 22
+[diff-so-fancy]
+        markEmptyLines = false
+
 
 [core]
 	excludesfile = ~/.gitignore
 	editor = vim --noplugin
+        pager = diff-so-fancy | less --tabs=4 -RF --pattern='^(Date|added|deleted|modified): '
 [apply]
 	whitespace = nowarn
 
