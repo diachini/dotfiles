@@ -1,3 +1,11 @@
+"<danny>
+" Encoding (important that this is set early in .vimrc)
+se enc=utf8 " use UTF-8 internally
+se fencs=ucs-bom,utf-8,default,latin1 " detect detectable Unicode, but fall back
+
+"</danny>
+
+
 " ========================================================================
 " Vundle stuff
 " ========================================================================
@@ -385,3 +393,12 @@ if has("autocmd")
   augroup END
 
 endif " has("autocmd")
+
+
+
+" <danny>
+set mouse=n
+set colorcolumn=80
+set laststatus=2
+set showtabline=2  " Always show the tab bar (even if 1 tab)
+" </danny>
