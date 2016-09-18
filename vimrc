@@ -401,4 +401,7 @@ set mouse=n
 set colorcolumn=80
 set laststatus=2
 set showtabline=2  " Always show the tab bar (even if 1 tab)
+
+" setup relative numbering
+call rnu#setup()
 " </danny>
