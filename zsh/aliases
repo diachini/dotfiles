@@ -141,3 +141,13 @@ alias production-tail='heroku logs --tail --remote production'
 alias db-pull-staging='development restore staging'
 alias db-pull-production='development restore production'
 alias db-copy-production-to-staging='staging restore production'
+
+
+
+# Danny stuff
+alias ll="ls -lahG"
+alias gs="git status"
+alias gap="git add -p"
+alias gci="git commit"
+alias al="vi ~/.zsh/aliases"
+alias gr="git reset HEAD"
