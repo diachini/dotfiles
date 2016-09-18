@@ -34,5 +34,6 @@ export PATH=$PATH:bin
 # Add my own dotfiles bin
 export PATH=$PATH:$HOME/.dotfiles/bin
 
+
 # RVM
-[[ -s "/Users/ben/.rvm/scripts/rvm" ]] && source "/Users/ben/.rvm/scripts/rvm"
+[[ -s "/Users/diachini/.rvm/scripts/rvm" ]] && source "/Users/diachini/.rvm/scripts/rvm"
