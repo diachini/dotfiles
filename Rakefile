@@ -38,6 +38,22 @@ task :install do
   system %Q{sudo mv /etc/zshenv /etc/zshrc}
 
   system %Q{mkdir ~/.tmp}
+
+  brew_or_not
+end
+
+def brew_or_not
+  print "perform `brew bundle` now? [ynq] "
+  case $stdin.gets.chomp
+  when 'y'
+    system %Q{brew bundle}
+  when 'n'
+    puts "Make sure you run `brew bundle` later on then...".red
+  when 'q'
+    exit
+  else
+    brew_or_not
+  end
 end
 
 def replace_file(file)
@@ -48,4 +64,16 @@ end
 def link_file(file)
   puts "linking ~/.#{file}"
   system %Q{ln -s "$PWD/#{file}" "$HOME/.#{file}"}
+end
+
+# http://stackoverflow.com/a/11482430
+class String
+  # colorization
+  def colorize(color_code)
+    "\e[#{color_code}m#{self}\e[0m"
+  end
+
+  def red
+    colorize(31)
+  end
 end
